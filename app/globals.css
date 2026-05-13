@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap');
+
+:root {
+  --maroon: #8B1538;
+  --maroon-light: #A91D44;
+  --maroon-bg: #FDF2F5;
+}
+
+body {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+[dir="rtl"] body,
+[dir="rtl"] {
+  font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Markdown-style content inside AI messages */
+.prose-legal p { margin-bottom: 0.75rem; }
+.prose-legal p:last-child { margin-bottom: 0; }
+.prose-legal strong { font-weight: 600; color: #111827; }
+.prose-legal ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 0.75rem; }
+.prose-legal li { margin-bottom: 0.25rem; }
+.prose-legal code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8em;
+  background: #F3F4F6;
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: #8B1538;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 4px; }
