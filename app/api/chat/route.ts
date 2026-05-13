@@ -38,10 +38,15 @@ export async function POST(req: NextRequest) {
 
   const anthropic = new Anthropic({ apiKey });
 
+  const dbPath = resolve(process.cwd(), "data/database.db");
+
   const transport = new StdioClientTransport({
     command: "node",
     args: [MCP_SERVER],
-    env: { ...process.env } as Record<string, string>,
+    env: {
+      ...process.env,
+      QATARI_LAW_DB_PATH: dbPath,
+    } as Record<string, string>,
   });
 
   const mcpClient = new Client(

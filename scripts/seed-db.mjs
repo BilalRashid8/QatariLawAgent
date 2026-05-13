@@ -8,7 +8,7 @@ import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DB_DIR = resolve(__dirname, "../node_modules/@ansvar/qatari-law-mcp/dist/data");
+const DB_DIR = resolve(__dirname, "../data");
 const DB_PATH = resolve(DB_DIR, "database.db");
 
 mkdirSync(DB_DIR, { recursive: true });
